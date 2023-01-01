@@ -1,42 +1,93 @@
 <html>
-  <head>
-    <style>
-      .wrapper {
-        height: 100vh;
-        /*This part is important for centering*/
-        display: grid;
-        place-items: center;
-      }
 
-      .typing-demo {
-        width: 13ch;
-        animation: typing 3s steps(13), blink .5s step-end infinite alternate;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid;
-        font-family: monospace;
-        font-size: 2em;
-      }
+<head>
 
-      @keyframes typing {
-        from {
-          width: 0
-        }
-      }
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hanken+Grotesk">
+        <style>
+            body {
+                font-family: "Hanken Grotesk", sans-serif;
+                font-weight: 300;
+                font-size: 4rem;
+            }
 
-      @keyframes blink {
-        50% {
-          border-color: transparent
-        }
-      }
+            header {
+                max-width: 750px;
+                min-height: 50vh;
+                margin: 0 auto;
+            }
 
-    </style>
-  </head>
+            header h1 {
+                display: block;
+
+                text-align: center;
+                padding-top: 40vh;
+            }
+
+            .main {
+                max-width: 750px;
+                margin: 0 auto;
+                margin-top: 10vh;
+                display: none;
+            }
+
+            .fade-in {
+                display: block;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            a{
+                color: black;
+                padding-bottom: 20vh;
+            }
+            .copyright{
+                font-size: 1rem;
+            }
+        </style>
+    </head>
+</head>
+
 <body>
-<div class="wrapper">
-    <div class="typing-demo">
-      We are forms.
-    </div>
-</div>
+    <header>
+        <h1>We Are Forms</h1>
+    </header>
+    <section class="main">
+        <p>is a creative design consultancy for contemporary living, established by industrial designers Carlos Tur and
+            Elena Martínez in Valencia</p>
+
+        <p>Our design process is carried out from a narrative starting point, relying on historical knowledge of design
+            and the search of new technologies and manufacturing processes, challenging industry and arquetipe
+            standards.</p>
+
+        <p>We explore functionality around human habits, with a forecasting eye on ever evolving usages and ways of
+            expression with preoccupation with simplicity, improvement and the pragmatic application of creativity;
+            combined with a rigorous and knowledgable approach to the technical aspects of materials and manufacturing
+            leads to results that are, at the same time, useful, engaging and relevant.</p>
+        <p><a href="https://www.instagram.com/weareforms">discover more</a></p>
+        <p class="copyright">© We Are Forms 2023</p>
+    </section>
+    
+
+
+    <script>
+
+        function fadeInOnScroll() {
+
+            // Get the main element
+            var mainElement = document.querySelector('.main');
+            // Add the "fade-in" class to the main element when the user scrolls past a certain point
+
+            mainElement.classList.add('fade-in');
+
+        }
+
+        // Call the function on scroll
+        window.addEventListener('wheel', fadeInOnScroll);
+
+    </script>
 </body>
+
 </html>
